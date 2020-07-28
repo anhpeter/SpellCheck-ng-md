@@ -1,0 +1,36 @@
+:root {
+    --blue: #4F81BD;
+    --main: #E2EEF6;
+}
+
+html {
+    font-size: 16px;
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.bg-main {
+    background-color: var(--main);
+}
+
+#result-container {
+    background-color: #fff;
+}
+
+p.title {
+    font-size: 2rem;
+}
+
+.bg-correct, .bg-incorrect {
+    padding: 0px 5px;
+}
+
+.bg-correct {
+    background-color: rgb(161, 252, 138)
+}
+
+.bg-incorrect {
+    background-color: rgb(255, 160, 160)
+}

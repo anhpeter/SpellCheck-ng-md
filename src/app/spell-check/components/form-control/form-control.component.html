@@ -1,0 +1,22 @@
+<div class="my-2 d-flex justify-content-between align-items-center" title="Change word pair type">
+    <div class="btn-group btn-group-sm" id="type-menu">
+
+        <a name="custom" routerLink="/form" [ngClass]="getMenuClass()">My word pair</a>
+        <a name="general" routerLink="/form/general" [ngClass]="getMenuClass('general')">General</a>
+
+    </div>
+    <!-- MESSAGE -->
+
+
+</div>
+<p id="message" class="badge badge-danger d-none">Please type input first!</p>
+<div class="form-inline">
+    <input type="text" class="form-control mb-2 mr-sm-2" [value]="_incorrectInput"
+        (keyup)="_incorrectInput=$event.target.value" placeholder="Incorrect word">
+    <input type="text" class="form-control mb-2 mr-sm-2" [value]="_correctInput"
+        (keyup)="_correctInput=$event.target.value" placeholder="Correct word">
+    <div>
+        <button (click)="onSubmit()" class="btn-sm btn btn-primary mb-2">Add</button>
+        <button routerLink="/" class="btn-sm ml-1 btn btn-dark mb-2">Back</button>
+    </div>
+</div>

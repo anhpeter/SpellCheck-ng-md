@@ -1,0 +1,20 @@
+<table class="table table-light table-striped ">
+    <thead class="">
+        <tr>
+            <th scope="column">#</th>
+            <th>Incorrect</th>
+            <th>Correct</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of this._items; let i = index">
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ item.incorrect }}</td>
+            <td>{{ item.correct }}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="onDelete(item)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

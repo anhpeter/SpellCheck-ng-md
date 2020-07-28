@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-12">
+        <p class="title h3"><a routerLink="/" class="text-blue decoration-none" title="Refresh">Spell check</a></p>
+    </div>
+
+    <!-- INPUT -->
+    <div class="col-lg-6">
+        <p class="d-flex justify-content-between align-items-center">
+            <span>Input</span>
+            <!-- 
+            <a routerLink="/form" data-target="#login" data-toggle="modal" name="check-spelling" id="add-spelling-btn"
+                class="decoration-none">Custom</a>
+             -->
+            <a routerLink="/form" name="check-spelling" id="add-spelling-btn"
+                class="decoration-none">Custom</a>
+        </p>
+        <form method="post" action="/" id="main-form">
+            <div class="form-group">
+                <textarea name="input" id="area-input" class="form-control" rows="5"
+                    (keyup)="onInputTextareaKeyup($event)" [innerText]="_input"></textarea>
+            </div>
+            <div class="btn-group btn-group-sm mt-2 disabled">
+                <button (click)="onCheck()" type="button" id="check-btn" class="btn btn-primary">Check</button>
+                <button (click)="onPaste()" type="button" id="paste-btn" class="btn btn-secondary">Paste</button>
+                <button (click)="onCopy()" type="button" id="copy-btn" class="btn btn-info">Copy</button>
+            </div>
+        </form>
+        <p id="message" class="badge badge-danger mt-3 d-none"></p>
+    </div>
+
+    <!-- OUTPUT -->
+    <div class="col-lg-6 mt-4 mt-lg-0">
+        <p class="">Result</p>
+        <div class="form-group">
+            <p id="result-container" class="border border-muted rounded p-2" style="min-height:132px" [innerHTML]="output"> </p>
+        </div>
+    </div>
+    <div class="col-12 text-right">
+        <p class="text-muted">
+            Developed by <a href="https://www.facebook.com/peteranh99" target="_blank"
+                class="text-secondary decoration-none font-weight-bold">Peter Anh</a>
+        </p>
+    </div>
+</div>
+
+<!-- MODAL -->
+<!-- 
+<app-modal></app-modal>
+
+ -->
