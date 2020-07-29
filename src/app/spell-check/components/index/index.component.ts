@@ -48,6 +48,16 @@ export class IndexComponent implements OnInit {
         this._input = $event.target.value;
     }
 
+    public isCheckBtnDisabled(): boolean{
+        if (this._input.trim() != '') return false;
+        return true;
+    }
+
+    public isCopyBtnDisabled(): boolean{
+        if (this._output.trim() != '') return false;
+        return true;
+    }
+
     get output(): string {
         if (this._output.trim() != '') return this._output;
         return '<span class="text-muted">Waiting for result ...</span>';

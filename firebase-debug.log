@@ -1,0 +1,25 @@
+[debug] [2020-07-28T10:58:17.548Z] ----------------------------------------------------------------------
+[debug] [2020-07-28T10:58:17.551Z] Command:       E:\Program Files\Node js\node.exe C:\Users\Asus ZenBook\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-07-28T10:58:17.551Z] CLI Version:   8.6.0
+[debug] [2020-07-28T10:58:17.551Z] Platform:      win32
+[debug] [2020-07-28T10:58:17.551Z] Node Version:  v12.16.2
+[debug] [2020-07-28T10:58:17.552Z] Time:          Tue Jul 28 2020 17:58:17 GMT+0700 (Indochina Time)
+[debug] [2020-07-28T10:58:17.553Z] ----------------------------------------------------------------------
+[debug] [2020-07-28T10:58:17.553Z] 
+[debug] [2020-07-28T10:58:17.561Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-28T10:58:17.562Z] > authorizing via signed-in user
+[debug] [2020-07-28T10:58:17.562Z] [iam] checking project spell-check-53a6a for permissions ["firebase.projects.get"]
+[debug] [2020-07-28T10:58:17.566Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spell-check-53a6a:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-07-28T10:58:18.576Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Jul 2020 10:58:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=828","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-28T10:58:18.578Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spell-check-53a6a  
+ 
+[debug] [2020-07-28T10:58:19.244Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Jul 2020 10:58:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'D:\Full-stack\spell-check'...
+[info] 
+[debug] [2020-07-28T10:58:19.248Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spell-check-53a6a/webApps/-/config  
+ 
+[debug] [2020-07-28T10:58:20.716Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 28 Jul 2020 10:58:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[ap-spell-check]: Serving hosting files from: dist/sample {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist/sample\u001b[22m"}}
+[info] +  hosting[ap-spell-check]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}

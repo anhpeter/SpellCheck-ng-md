@@ -43,10 +43,24 @@ export class FirebaseService {
         if (this._types.includes(type)) {
             if (data.incorrect.trim() != '' && data.correct.trim() != '') {
                 let item: any = {
+                    incorrect: data.incorrect.trim(),
+                    correct: data.correct.trim(),
+                }
+                this._db.list(this.toCollection(type)).push(item).then(() => {
+                    if (this._helper.isFn(doneCallback)) doneCallback();
+                });
+            }
+        }
+    }
+
+    public updateWord(type: string, key: string, data: any, doneCallback?: () => void) {
+        if (this._types.includes(type)) {
+            if (data.incorrect.trim() != '' && data.correct.trim() != '' && key.trim() != '') {
+                let item: any = {
                     incorrect: data.incorrect,
                     correct: data.correct,
                 }
-                this._db.list(this.toCollection(type)).push(item).then(() => {
+                this._db.object(`${this.toCollection(type)}/${key}`).update(item).then(() => {
                     if (this._helper.isFn(doneCallback)) doneCallback();
                 });
             }
@@ -394,5 +408,4 @@ export class FirebaseService {
                 }
             })
     }
-
 }

@@ -24,7 +24,7 @@ export class FormControlComponent implements OnInit {
                 incorrect: this._incorrectInput,
             })
             this.reset();
-        } else alert('Invalid');
+        }
     }
 
     private reset(): void {
@@ -41,5 +41,10 @@ export class FormControlComponent implements OnInit {
             'btn-secondary': !isActive,
             'btn-info': isActive,
         }
+    }
+
+    public isAddBtnDisabled(): boolean{
+        if (this._incorrectInput.trim() != '' && this._correctInput.trim() != '') return false;
+        return true;
     }
 }

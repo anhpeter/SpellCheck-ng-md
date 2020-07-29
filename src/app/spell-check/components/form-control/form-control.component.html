@@ -16,7 +16,7 @@
     <input type="text" class="form-control mb-2 mr-sm-2" [value]="_correctInput"
         (keyup)="_correctInput=$event.target.value" placeholder="Correct word">
     <div>
-        <button (click)="onSubmit()" class="btn-sm btn btn-primary mb-2">Add</button>
-        <button routerLink="/" class="btn-sm ml-1 btn btn-dark mb-2">Back</button>
+        <button (click)="onSubmit()" class="btn-sm btn btn-primary mb-2" [disabled]="isAddBtnDisabled()">Add</button>
+        <a routerLink="/" class="btn-sm ml-1 btn btn-dark mb-2">Back</a>
     </div>
 </div>

@@ -10,10 +10,33 @@
     <tbody>
         <tr *ngFor="let item of this._items; let i = index">
             <th scope="row">{{ i+1 }}</th>
-            <td>{{ item.incorrect }}</td>
-            <td>{{ item.correct }}</td>
-            <td>
-                <button class="btn btn-danger btn-sm" (click)="onDelete(item)">Delete</button>
+            <ng-template [ngIf]="!item.onEdit">
+                <td>{{ item.incorrect }}</td>
+                <td>{{ item.correct }}</td>
+            </ng-template>
+            <ng-template [ngIf]="item.onEdit">
+                <td>
+                    <input type="text" class="form-control" [value]="item.incorrect"
+                        (keyup)="onEditKeyup($event, 'incorrect', item)">
+                </td>
+                <td>
+                    <input type="text" class="form-control" [value]="item.correct"
+                        (keyup)="onEditKeyup($event, 'correct', item)">
+                </td>
+            </ng-template>
+            <td class="no-wrap">
+                <ng-template [ngIf]="!item.onEdit">
+                    <button class="btn btn-success btn-sm" (click)="onEdit(item)" [disabled]="_isActionDisabled"><i
+                            class="far fa-pencil fa-fw"></i></button>
+                    <button class="btn btn-danger btn-sm ml-1" (click)="onDelete(item)"
+                        [disabled]="_isActionDisabled"><i class="far fa-trash-alt fa-fw"></i></button>
+                </ng-template>
+                <ng-template [ngIf]="item.onEdit">
+                    <button class="btn btn-primary btn-sm" (click)="onSubmitEditing(item)"
+                        [disabled]="isEditSubmitBtnDisabled(item)"><i class="far fa-check fa-fw"></i></button>
+                    <button class="btn btn-dark btn-sm ml-1" (click)="onCancelEditing(item)"><i
+                            class="far fa-times fa-fw"></i></button>
+                </ng-template>
             </td>
         </tr>
     </tbody>

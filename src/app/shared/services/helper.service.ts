@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
+import { NotifierService } from "angular-notifier";
 
 @Injectable({
     providedIn: 'root'
 })
 export class HelperService {
 
-    constructor() { }
+    constructor(
+        private _notifier: NotifierService,
+    ) { }
 
     public copy(str: string): void {
         const el = document.createElement('textarea');
@@ -43,5 +46,14 @@ export class HelperService {
             })
         }
         return items
+    }
+
+    public notifier(message: string): void {
+        if (message.trim() != '') {
+            this._notifier.notify(
+                "default",
+                message,
+            );
+        }
     }
 }

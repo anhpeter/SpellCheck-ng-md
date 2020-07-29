@@ -37,11 +37,15 @@ export class FormComponent implements OnInit {
     }
 
     public onDelete(item: any): void {
-        this._firebase.deleteWord(this._formType, item.key);
+        this._firebase.deleteWord(this._formType, item.key, () => {
+            this._helper.notifier('Item deleted');
+        });
     }
 
     // add
     public onSubmit(data: any): void {
-        this._firebase.addWord(this._formType, data);
+        this._firebase.addWord(this._formType, data, () => {
+            this._helper.notifier('Item Added');
+        });
     }
 }

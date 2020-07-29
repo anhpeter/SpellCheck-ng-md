@@ -19,10 +19,10 @@
                 <textarea name="input" id="area-input" class="form-control" rows="5"
                     (keyup)="onInputTextareaKeyup($event)" [innerText]="_input"></textarea>
             </div>
-            <div class="btn-group btn-group-sm mt-2 disabled">
-                <button (click)="onCheck()" type="button" id="check-btn" class="btn btn-primary">Check</button>
-                <button (click)="onPaste()" type="button" id="paste-btn" class="btn btn-secondary">Paste</button>
-                <button (click)="onCopy()" type="button" id="copy-btn" class="btn btn-info">Copy</button>
+            <div class=" mt-2 no-wrap">
+                <button (click)="onCheck()" type="button" id="check-btn" class="btn btn-secondary btn-sm" [disabled]="isCheckBtnDisabled()">Check</button>
+                <button (click)="onPaste()" type="button" id="paste-btn" class="btn btn-secondary btn-sm ml-1">Paste</button>
+                <button (click)="onCopy()" type="button" id="copy-btn" class="btn btn-secondary btn-sm ml-1" [disabled]="isCopyBtnDisabled()">Copy</button>
             </div>
         </form>
         <p id="message" class="badge badge-danger mt-3 d-none"></p>

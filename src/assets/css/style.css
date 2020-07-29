@@ -15,6 +15,10 @@ html {
     background-color: var(--main);
 }
 
+.no-wrap{
+    white-space: nowrap;
+}
+
 #result-container {
     background-color: #fff;
 }

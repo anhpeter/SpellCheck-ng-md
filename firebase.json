@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist/sample",
+    "site": "ap-spell-check",
     "ignore": [
       "firebase.json",
       "**/.*",

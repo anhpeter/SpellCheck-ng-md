@@ -1,14 +1,13 @@
 <div class="row">
     <!-- INPUT -->
     <div class="offset-lg-2 offset-0 col-lg-8">
-        <p class="title h3"><a title="Get json data" routerLink="/form"
-                class="decoration-none text-blue">Custom</a></p>
+        <p class="title h3"><a routerLink="/form" class="decoration-none text-blue">Custom</a></p>
         <app-form-control (onSubmit)="onSubmit($event)" [formType]="_formType"></app-form-control>
     </div>
 
     <!-- SPELLING LIST -->
     <div class="offset-lg-2 offset-0 col-lg-8">
-        <app-form-list [items]="_items" (onDelete)="onDelete($event)"></app-form-list>
+        <app-form-list [items]="_items" [formType]="_formType" (onDelete)="onDelete($event)"></app-form-list>
     </div>
 </div>
 
